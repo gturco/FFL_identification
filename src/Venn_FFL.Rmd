@@ -1,0 +1,32 @@
+---
+title: "Venn FFL"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+# install.packages('VennDiagram')
+library(VennDiagram)
+
+### MYB83, VND7 
+grid.newpage()
+draw.pairwise.venn(392, 281, 12, category = c("VND7 (GSE23555)", "MYB46 (GSE16143)"), lty = rep("blank", 
+    2), fill = c("light blue", "pink"), alpha = rep(0.5, 2), cat.pos = c(0, 
+    0), cat.dist = rep(0.025, 2))
+
+```
+
+```{r}
+
+grid.newpage()
+draw.pairwise.venn(392, 281, 12, category = c("Global analysis of direct targets of secondary wall NAC master switches in Arabidopsis", "Ectopic expression of MYB46 identifies transcriptional regulatory genes involved in secondary wall biosynthesis in Arabidopsis"), lty = rep("blank", 
+    2), fill = c("light blue", "pink"), alpha = rep(0.5, 2), cat.pos = c(0, 
+    0), cat.dist = rep(0.025, 2))
+
+
+```
+
